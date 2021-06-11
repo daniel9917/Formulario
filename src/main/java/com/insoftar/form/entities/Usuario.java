@@ -27,11 +27,11 @@ public class Usuario implements Serializable {
 	
 	@NotBlank(message = "Nombre: No debe estar vacío.")	
 	@Pattern(regexp="^[A-Za-z]*$",message = "Nombre: Solo se aceptan letras")
-	private String nombre;
+	private String name;
 		
 	@NotBlank(message = "Apellido: No debe estar vacío.")
 	@Pattern(regexp="^[A-Za-z]*$",message = "Apellido: Solo se aceptan letras")
-	private String apellido;
+	private String lastName;
 	
 	@Min(value = 1,
 		message = "Cédula: Formato numérico de hasta 10 dígitos.")
@@ -48,7 +48,7 @@ public class Usuario implements Serializable {
 	@Digits(fraction = 0, 
 			integer = 10, 
 			message = "Teléfono: Formato numérico de hasta 10 dígitos.")	
-	private Long telefono;
+	private Long phone;
 	
 	public Usuario() {
 		// TODO Auto-generated constructor stub
@@ -60,20 +60,20 @@ public class Usuario implements Serializable {
 		return id;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public String getName() {
+		return name;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setName(String nombre) {
+		this.name = nombre;
 	}
 
-	public String getApellido() {
-		return apellido;
+	public String getLastName() {
+		return lastName;
 	}
 
-	public void setApellido(String apellido) {
-		this.apellido = apellido;
+	public void setLastName(String apellido) {
+		this.lastName = apellido;
 	}
 
 	public Long getCedula() {
@@ -92,12 +92,12 @@ public class Usuario implements Serializable {
 		this.email = email;
 	}
 
-	public Long getTelefono() {
-		return telefono;
+	public Long getPhone() {
+		return phone;
 	}
 
-	public void setTelefono(Long telefono) {
-		this.telefono = telefono;
+	public void setPhone(Long telefono) {
+		this.phone = telefono;
 	}
 
 	/**
